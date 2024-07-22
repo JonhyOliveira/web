@@ -7,6 +7,7 @@ BASE_PATH = pathlib.Path(__file__).parent
 RICK_ROLL = 'https://shattereddisk.github.io/rickroll/rickroll.mp4'
 
 def create_app():
+    AnalyticsDatabase.setup()
     app = Flask(__name__, static_url_path='/pub')
     app.jinja_env.filters['quote_plus'] = quote_plus
 
