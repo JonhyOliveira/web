@@ -17,10 +17,11 @@ services:
   prod:
     build: ./
     ports:
-      - '8000:8000'
+      - '8080:8080'
     networks:
       - nginx_default
     restart: unless-stopped
+    command: gunicorn -b 0.0.0.0 -p 8080 app:app
 
 networks:
   nginx_default:
