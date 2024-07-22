@@ -51,7 +51,7 @@ def create_app():
     return app
 
 if __name__ == '__main__':
-    create_app().run(debug=True, extra_files=["descriptions.html"])
+    create_app().run(debug=True)
 else:
     app = create_app()
     def application():
