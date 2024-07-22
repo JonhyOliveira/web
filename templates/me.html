@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="og:title" content="João Oliveira">
+        <meta name="og:description" content="A guy with a website">
+        <meta name="og:type" content="website">
+        <meta name="og:site_name" content="João Oliveira">
+        <meta name="og:locale" content="en_US">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@caofazau">
+        <meta name="twitter:title" content="João Oliveira">
+        <meta name="twitter:description" content="A guy with a website">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>João Oliveira</title>
+        <style>
+            body {
+                color: #000;
+                display: flex;
+                margin: 0;
+                justify-content: center;
+                place-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 3rem;
+                color: #555;
+                margin-top: 10%;
+                text-align: center;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            a {
+                color: #84d;
+            }
+
+            section {
+                text-align: center;
+                padding: 2rem 6rem;
+                background-color: #ddd;
+                border-radius: 1rem;
+                box-shadow: #111 0.1rem 0.1rem 1rem;
+            }
+
+            @media (max-width: 600px) {
+                section {
+                    padding: 1rem;
+                }
+            }
+
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background-color: #333;
+                }
+
+                h1 {
+                    color: #bbb;
+                }
+
+                h2 {
+                    color: #999
+                }
+
+                a {
+                    color: #f0f;
+                }
+
+                a:active {
+                    color: #0ff;
+                }
+
+                .darkmode-easter-egg {
+                    display: inline;
+                }
+
+                .darkmode-easter-egg a {
+                    color: #fff;
+                }
+            }
+        </style>
+
+        <script src="{{url_for('static', filename='htmx.min.js')}}"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={{'Comic Neue'|quote_plus}}&family={{'Kode Mono:wght@400;700'|quote_plus}}">
+    </head>
+    <body>
+        <div class="darkmode-easter-egg" style="align-self: stretch; text-align: center; padding: 0.5rem 0; background-color: #888;">
+            <a target="_blank" href="/cookie">🍪 Have a cookie 🍪</a><br>
+            <small>Don't worry it's not the tracking kind!</small>
+            <a id="close-cookie-offer" style="position: absolute; right: 10px; transform: translateY(-50%); font-size: 24px; cursor: pointer;">X</a>
+        </div>
+        <div style="margin: 0 1rem;">
+            <h1 style="font-family: Kode Mono; font-weight: 700;">João Oliveira</h1>
+            {% if passion_mode %}
+            <h2 style="font-family: Comic Neue;">Web development is my passion</h2>
+            {% else %}
+            <h2>Computer enjoyer</h2>
+            {% endif %}
+            <br>
+            <section style="margin-top: 1rem;">
+                <b>Learn more about me</b>
+                <ol style="list-style-type: none; padding: 0;">
+                    <li><a target="_blank" href="https://linkedin.com/in/{{linkedin_handle}}">{{linkedin_handle}}@LinkedIn</a></li>
+                    <li><a target="_blank" href="https://github.com/{{github_handle}}">{{github_handle}}@Github</a></li>
+                    <li></li>
+                </ol>
+            </section>
+        </div>
+        <script>
+            document.getElementById('close-cookie-offer').addEventListener('click', () => {
+                confirm('Have a cookie anyway. What\'s the worst that could happen?')
+                window.open('/cookie', '_blank').focus()
+            });
+        </script>
+    </body>
+</html>
