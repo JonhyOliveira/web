@@ -2,7 +2,7 @@
 
 Behold the source code for **my** **cutting-edge, quantum-resilient** website—an epic fusion of minimalist design and backend wizardry. 🌟
 
-You can find it [here](www.joaooliveira.xyz).
+You can find it https://www.joaooliveira.xyz.
 
 ## **🛠️ Tech Stack**
 
