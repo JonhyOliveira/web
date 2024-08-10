@@ -21,6 +21,7 @@ class AnalyticsDatabase:
 
     @classmethod
     def get_stats(cls) -> dict:
+        # this is broken :)
         cls.conn = cls.clicks_connection()
         print(cls.events_table)
         result = cls.conn.execute(f'SELECT event, COUNT(id) AS  FROM "{cls.events_table}" GROUP BY event')
