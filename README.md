@@ -34,4 +34,4 @@ Welcome to the **hypothetical innovation lab**—a place where ideas **quantum l
 
 ---
 
-🤖 Powered by **ChatGPT**, because what's a project without AI? 🤖
+🤖 This file is powered by **ChatGPT**, because what's a project without AI? 🤖
